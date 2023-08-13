@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<robot name="fsm_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/Silver" />
+
+<gazebo>
+    <plugin filename="libgazebo_ros_diff_drive.so" name="diff_drive">
+        <!-- Set control loop update rate -->
+        <updateRate>100</updateRate>
+
+        <!-- Name of left joint, defaults to left_joint -->
+        <leftJoint>Revolute 7</leftJoint>
+
+        <!-- Name of right joint, defaults to right_joint -->
+        <rightJoint>Revolute 6</rightJoint>
+
+        <publish_rate>10</publish_rate>
+
+        <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
+        <wheelSeparation>0.199</wheelSeparation>
+
+        <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
+        <wheelDiameter>0.107</wheelDiameter>
+
+        <!-- Topics -->
+        <commandTopic>cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+
+        <!-- Set if odom required -->
+        <publishOdom>true</publishOdom>
+        <publishOdomTF>true</publishOdomTF>
+
+        <publishTF>true</publishTF>
+
+        <!-- Frame IDs -->
+        <odometryFrame>odom</odometryFrame>
+        <robotBaseFrame>base_link</robotBaseFrame>
+
+        <odometrySource>world</odometrySource>
+
+        <!-- Set odom covariance -->
+        <covariance_x>0.0001</covariance_x>
+        <covariance_y>0.0001</covariance_y>
+        <covariance_z>0.0001</covariance_z>
+    </plugin>
+</gazebo>
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="motor_right_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="motor_left_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="tyre_right_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="tyre_left_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lidar_v1_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>

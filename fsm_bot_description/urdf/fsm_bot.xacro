@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<robot name="fsm_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find fsm_bot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find fsm_bot_description)/urdf/fsm_bot.trans" />
+<xacro:include filename="$(find fsm_bot_description)/urdf/fsm_bot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="2.681048774913271e-05 0.028881616474493055 0.025256822921076824" rpy="0 0 0"/>
+    <mass value="68.5488821248869"/>
+    <inertia ixx="5.645992" iyy="2.646478" izz="7.256922" ixy="-0.000917" iyz="0.134226" ixz="0.000181"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_right_1">
+  <inertial>
+    <origin xyz="0.01130470526555527 -0.06556668434295745 -0.10047077089070608" rpy="0 0 0"/>
+    <mass value="7.531128321328023"/>
+    <inertia ixx="0.018628" iyy="0.0301" izz="0.027239" ixy="-2.4e-05" iyz="1.5e-05" ixz="0.000857"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2 -0.103 -0.0201" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2 -0.103 -0.0201" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_left_1">
+  <inertial>
+    <origin xyz="-0.011304705265915288 -0.06543331565702307 -0.10047077109165434" rpy="0 0 0"/>
+    <mass value="7.531128321328023"/>
+    <inertia ixx="0.018628" iyy="0.0301" izz="0.027239" ixy="-2.4e-05" iyz="-1.5e-05" ixz="-0.000857"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2 -0.103 -0.0201" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2 -0.103 -0.0201" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tyre_right_1">
+  <inertial>
+    <origin xyz="-0.019000000000200634 1.2791850911852976e-13 2.605335669425557e-10" rpy="0 0 0"/>
+    <mass value="2.591613190179594"/>
+    <inertia ixx="0.012158" iyy="0.006383" izz="0.006383" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2802 -0.0375 0.089" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/tyre_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2802 -0.0375 0.089" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/tyre_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tyre_left_1">
+  <inertial>
+    <origin xyz="0.018999999999829598 -1.7047474543119279e-13 5.966924176981081e-11" rpy="0 0 0"/>
+    <mass value="2.591613190179594"/>
+    <inertia ixx="0.012158" iyy="0.006383" izz="0.006383" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2802 -0.0375 0.089" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/tyre_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2802 -0.0375 0.089" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/tyre_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_v1_1">
+  <inertial>
+    <origin xyz="5.182183931130028e-05 -0.005178310915446072 0.04337962866422612" rpy="0 0 0"/>
+    <mass value="5.867822598026893"/>
+    <inertia ixx="0.009537" iyy="0.009293" izz="0.007574" ixy="-2e-06" iyz="-4.2e-05" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="1e-05 -0.2705 -0.1207" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/lidar_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="1e-05 -0.2705 -0.1207" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fsm_bot_description/meshes/lidar_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="0.2 0.103 0.0201" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_right_1"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="-0.2 0.103 0.0201" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_left_1"/>
+</joint>
+
+<joint name="Revolute 6" type="continuous">
+  <origin xyz="0.0802 -0.0655 -0.1091" rpy="0 0 0"/>
+  <parent link="motor_right_1"/>
+  <child link="tyre_right_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 7" type="continuous">
+  <origin xyz="-0.0802 -0.0655 -0.1091" rpy="0 0 0"/>
+  <parent link="motor_left_1"/>
+  <child link="tyre_left_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 15" type="fixed">
+  <origin xyz="-1e-05 0.2705 0.1207" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_v1_1"/>
+</joint>
+
+</robot>
