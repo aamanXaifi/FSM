@@ -93,6 +93,7 @@
           <geometry>
             <mesh>
               <uri>model://room/meshes/room.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -101,6 +102,7 @@
           <geometry>
             <mesh>
               <uri>model://room/meshes/room.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
