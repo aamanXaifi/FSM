@@ -1,10 +1,10 @@
 <launch>
-<arg name="x_pos" default="0.0" />
-<arg name="y_pos" default="0.0" />
-<arg name="z_pos" default="0.0213" />
-<arg name="yaw" default="2.44" />
+<arg name="x_pos" default="-1.3" />
+<arg name="y_pos" default="-2.487" />
+<arg name="z_pos" default="0.167" />
 
-
+<param name="robot_description" command="$(find xacro)/xacro $(find fsm_bot_description)/urdf/fsm_bot.xacro"/>
+<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model fsm_bot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
 
 <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(find fsm_world)/worlds/room.world"/> 

@@ -17,10 +17,10 @@
         <publish_rate>10</publish_rate>
 
         <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
-        <wheelSeparation>0.199</wheelSeparation>
+        <wheelSeparation>0.56</wheelSeparation>
 
         <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
-        <wheelDiameter>0.107</wheelDiameter>
+        <wheelDiameter>0.154</wheelDiameter>
 
         <!-- Topics -->
         <commandTopic>cmd_vel</commandTopic>

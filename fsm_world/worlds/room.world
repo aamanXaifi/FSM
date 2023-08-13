@@ -29,10 +29,6 @@
             </plane>
           </geometry>
           <surface>
-            <contact>
-              <collide_bitmask>65535</collide_bitmask>
-              <ode/>
-            </contact>
             <friction>
               <ode>
                 <mu>100</mu>
@@ -42,6 +38,9 @@
                 <ode/>
               </torsional>
             </friction>
+            <contact>
+              <ode/>
+            </contact>
             <bounce/>
           </surface>
           <max_contacts>10</max_contacts>
@@ -122,13 +121,13 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.131142 -3.4301 0 0 -0 0</pose>
+      <pose>0.509625 -3.94122 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>129 188000000</sim_time>
-      <real_time>129 806612477</real_time>
-      <wall_time>1690362599 201292451</wall_time>
-      <iterations>129188</iterations>
+      <sim_time>150 486000000</sim_time>
+      <real_time>150 810162033</real_time>
+      <wall_time>1691926628 680953892</wall_time>
+      <iterations>150486</iterations>
       <model name='ground_plane'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -140,10 +139,10 @@
         </link>
       </model>
       <model name='room'>
-        <pose>-0.545918 -3.4301 0 0 -0 0</pose>
+        <pose>0.509625 -3.94122 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='room_link'>
-          <pose>-0.545918 -3.4301 0 0 -0 0</pose>
+          <pose>0.509625 -3.94122 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -155,7 +154,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>0.014793 1.1297 16.8481 1e-06 1.5338 -1.47097</pose>
+        <pose>5.29214 -4.77356 5.23289 0 0.275643 2.35619</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
